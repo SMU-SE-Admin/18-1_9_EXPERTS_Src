@@ -16,7 +16,7 @@ public class cancel extends JFrame{
 	public cancel()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 400, 300);
+		setBounds(200, 200, 400, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
@@ -41,9 +41,6 @@ JLabel NewLabel = new JLabel();
 						try {
 							main frame = new main();
 							frame.setVisible(true);
-							
-							setVisible(false);
-						    dispose();
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
