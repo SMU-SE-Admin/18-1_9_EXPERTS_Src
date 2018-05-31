@@ -111,7 +111,7 @@ public class inserttodolist extends JFrame{
 							
 							FileWriter fw = new FileWriter("todolist.txt",true);
 							BufferedWriter bf = new BufferedWriter(fw);
-							if(textField.getText().equals(null)||textField_1.getText().equals(null)||textField_2.getText().equals(null)||textField_3.getText().equals(null)||textField_4.getText().equals(null))
+							if(textField.getText().isEmpty()||textField_1.getText().isEmpty()||textField_2.getText().isEmpty()||textField_3.getText().isEmpty()||textField_4.getText().isEmpty())
 							{
 								check frame1 = new check();
 								frame1.setVisible(true);
@@ -119,11 +119,11 @@ public class inserttodolist extends JFrame{
 								setVisible(false);
 							    dispose();
 							}
-							else if(textField_3.getText().equals("완료")||textField_3.getText().equals("진행"))
-							{
-								if(textField_4.getText().equals("1")||textField_4.getText().equals("2")||textField_4.getText().equals("3")||textField_4.getText().equals("4")||textField_4.getText().equals("5"))
+							
+							else if((textField_3.getText().equals("완료")||textField_3.getText().equals("진행"))&&(textField_4.getText().equals("1")||textField_4.getText().equals("2")||textField_4.getText().equals("3")||textField_4.getText().equals("4")||textField_4.getText().equals("5")))
 								{	
-							bf.write(textField.getText()+" ");
+								
+									bf.write(textField.getText()+" ");
 							bf.write(textField_1.getText()+" ");
 							bf.write(textField_2.getText()+" ");
 							bf.write(textField_3.getText()+" ");
@@ -142,7 +142,7 @@ public class inserttodolist extends JFrame{
 							setVisible(false);
 						    dispose();
 								}
-							}
+								
 							else
 							{
 								check frame1 = new check();
