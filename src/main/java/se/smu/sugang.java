@@ -120,15 +120,25 @@ public class sugang extends JFrame{
 								
 						 FileWriter fw = new FileWriter("subject.txt",true);
 							BufferedWriter bf = new BufferedWriter(fw);
-							if(textField.getText().equals(null)||textField_1.getText().equals(null)||textField_2.getText().equals(null)||textField_3.getText().equals(null)||textField_4.getText().equals(null)||textField_5.getText().equals(null))
+							if(textField.getText().isEmpty()||textField_1.getText().isEmpty()||textField_2.getText().isEmpty()||textField_3.getText().isEmpty()||textField_4.getText().isEmpty()||textField_5.getText().isEmpty())
 							{
 								check frame1 = new check();
 								frame1.setVisible(true);
-							}
-							else if(textField_5.getText().equals("1")||textField_5.getText().equals("2"))
-							{
 								
-									if(textField_2.getText().equals("월")||textField_2.getText().equals("화")||textField_2.getText().equals("수")||textField_2.getText().equals("목")||textField_2.getText().equals("금")||textField_2.getText().equals("토")||textField_2.getText().equals("일"))
+								setVisible(false);
+								 dispose();
+							}
+							else if(textField_5.getText().equals("1")||textField.getText().equals("2"))
+							{
+								check frame1 = new check();
+								frame1.setVisible(true);
+								
+								setVisible(false);
+								 dispose();
+							}
+							else if(textField_5.getText().equals("1")||textField.getText().equals("2"))
+							{
+							 if(textField_2.getText().equals("월")||textField_2.getText().equals("화")||textField_2.getText().equals("수")||textField_2.getText().equals("목")||textField_2.getText().equals("금")||textField_2.getText().equals("토")||textField_2.getText().equals("일"))
 									{
 							bf.write(textField.getText()+" ");
 							bf.write(textField_1.getText()+" ");
@@ -147,15 +157,22 @@ public class sugang extends JFrame{
 							
 							insertok frame = new insertok();
 							frame.setVisible(true);
+							
+							setVisible(false);
+						    dispose();
 									}
 							}
 							else
 							{
 								check frame1 = new check();
 								frame1.setVisible(true);
+								
+								setVisible(false);
+							    dispose();
+								
+								
 							}
-							setVisible(false);
-						    dispose();
+							
 							
 							}catch (Exception e)
 						{
