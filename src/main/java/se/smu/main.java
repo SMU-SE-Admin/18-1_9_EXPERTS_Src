@@ -2,21 +2,12 @@ package se.smu;
 
 import java.awt.*;
 import javax.swing.*;
-
 import javax.swing.border.*;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.File;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
-import java.util.StringTokenizer;
 import java.awt.event.ActionEvent;
 import javax.swing.table.DefaultTableModel;
-import java.io.IOException;
-import java.util.logging.Logger;
 public class main extends JFrame{
 	
 	private JPanel contentPane;
@@ -156,9 +147,16 @@ public class main extends JFrame{
 						try
 						{
 							DefaultTableModel model1 = (DefaultTableModel)table1.getModel();
-							final int SelectedRowIndex1 = table1.getSelectedRow(); 
-							
-								if(textField_3.getText().equals("완료")||textField_3.getText().equals("진행"))
+							int SelectedRowIndex1 = table1.getSelectedRow(); 
+							if(textField.getText().isEmpty()||textField_1.getText().isEmpty()||textField_2.getText().isEmpty()||textField_3.getText().isEmpty()||textField_4.getText().isEmpty())
+							{
+								check frame = new check();
+								frame.setVisible(true);
+								
+								setVisible(false);
+							    dispose();
+							}
+							else if(textField_3.getText().equals("완료")||textField_3.getText().equals("진행"))
 								{
 									if(textField_4.getText().equals("1")||textField_4.getText().equals("2")||textField_4.getText().equals("3")||textField_4.getText().equals("4")||textField_4.getText().equals("5"))
 									{	
@@ -172,6 +170,7 @@ public class main extends JFrame{
 									}
 							}
 								}
+							
 								else
 								{
 									check frame = new check();
@@ -180,7 +179,8 @@ public class main extends JFrame{
 									setVisible(false);
 								    dispose();
 								}
-							}	
+						}
+					
 						catch (Exception e)
 						{
 							e.printStackTrace();
