@@ -6,7 +6,7 @@ import java.awt.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.table.DefaultTableModel;
+
 
 public class cancel extends JFrame{
 
@@ -16,19 +16,17 @@ public class cancel extends JFrame{
 	public cancel()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(200, 200, 400, 300);
+		setBounds(0, 0, 400, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		//contentPane.setBackground(Color.WHITE);
 		setTitle("cancel");
 		
 JLabel NewLabel = new JLabel();
 		
 		NewLabel.setText("          취소되었습니다.");
 		NewLabel.setOpaque(true);
-		//NewLabel.setBackground(Color.WHITE);
 		NewLabel.setFont(new Font("돋음", Font.PLAIN, 30));
 		NewLabel.setBounds(0, 50, 400, 50);
 		contentPane.add(NewLabel);
@@ -40,7 +38,9 @@ JLabel NewLabel = new JLabel();
 					public void run() {
 						try {
 							main frame = new main();
-							frame.setVisible(true);
+							frame.setVisible(true);							
+							setVisible(false);
+						    dispose();
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
