@@ -1,19 +1,14 @@
 package se.smu;
 
 import java.awt.*;
-
 import javax.swing.*;
-
 import javax.swing.border.*;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.File;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
+
 public class login extends JFrame{
 	
 	private JPanel contentPane;
@@ -82,6 +77,13 @@ public class login extends JFrame{
 							StringTokenizer tokenizer = new StringTokenizer(line," ");
 							int n = tokenizer.countTokens();
 							
+							if(textField.getText().isEmpty()||textField_1.getText().isEmpty())
+							{
+								noid frame = new noid();
+								frame.setVisible(true);
+								setVisible(false);
+							    dispose();
+							}
 							for(int i=1;i<=n/2;i++)
 							{
 						
@@ -92,7 +94,6 @@ public class login extends JFrame{
 							{
 							main frame = new main();
 							frame.setVisible(true);
-							
 							setVisible(false);
 						    dispose();
 							break;
@@ -102,24 +103,12 @@ public class login extends JFrame{
 							
 									noid frame = new noid();
 									frame.setVisible(true);
-									
-									
-									//if(i>n/2)
-										//break;
 									setVisible(false);
 								    dispose();
 							}
 							
 							}
-							
-							
-							//else
-							//{
-							//signupfail frame = new signupfail();
-							//frame.setVisible(true);
-							
-							//}	
-							//}
+
 					}catch (Exception e)
 						{
 							e.printStackTrace();
