@@ -8,7 +8,7 @@ import java.io.*;
 import javax.swing.border.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.beans.EventHandler;
+
 public class signup extends JFrame{
 
 	
@@ -82,8 +82,16 @@ public class signup extends JFrame{
 					{
 						try
 						{
+							if(textField.getText().isEmpty()||textField_1.getText().isEmpty()||textField_2.getText().isEmpty())
 						
-							if(textField_1.getText().equals(textField_2.getText()))
+							{
+								signupfail frame = new signupfail();
+								frame.setVisible(true);
+								
+								setVisible(false);
+							    dispose();
+							}
+							else if(textField_1.getText().equals(textField_2.getText()))
 							{
 								
 								FileWriter fw = new FileWriter("save.txt",true);
@@ -140,6 +148,8 @@ public class signup extends JFrame{
 						{
 							login frame = new login();
 							frame.setVisible(true);
+							setVisible(false);
+						    dispose();
 							
 						}catch (Exception e)
 						{

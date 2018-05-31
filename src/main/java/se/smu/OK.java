@@ -6,7 +6,7 @@ import java.awt.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.table.DefaultTableModel;
+
 
 public class OK extends JFrame{
 
@@ -41,7 +41,6 @@ JLabel NewLabel = new JLabel();
 						try {
 							login frame = new login();
 							frame.setVisible(true);
-							
 							setVisible(false);
 						    dispose();
 						} catch (Exception e) {
