@@ -6,7 +6,7 @@ import java.awt.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.table.DefaultTableModel;
+
 
 
 public class check extends JFrame{
@@ -22,14 +22,14 @@ public class check extends JFrame{
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
-		//contentPane.setBackground(Color.WHITE);
+
 		setTitle("cancel");
 		
 JLabel NewLabel = new JLabel();
 		
 		NewLabel.setText("        정보를 확인해주세요.");
 		NewLabel.setOpaque(true);
-		//NewLabel.setBackground(Color.WHITE);
+
 		NewLabel.setFont(new Font("돋음", Font.PLAIN, 30));
 		NewLabel.setBounds(0, 50, 400, 50);
 		contentPane.add(NewLabel);
